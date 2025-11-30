@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Change your site title: (It is shown in the tab) -->
+    <title>Owen's Website</title>
+
+    <!-- Change your site description: (It is shown in Google results) -->
+    <meta content="My home on the net!" name="description" />
+
+    <!-- Setting character encoding and viewport size. Do not remove. -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- FavIcon (small image in tab), change to any image you want: -->
+    <link href="/favicon.ico" rel="icon" type="image/x-icon" />
+
+    <!-- CSS: -->
+    <!-- You will have to change this to "../style.css" if this HTML file is in a subfolder, to "../../style.css" if this HTML file is in 2 subfolders, etc. -->
+    <link href="./style.css" rel="stylesheet" />
+    
+    <!-- JavaScript: -->
+    <!-- You will have to change this to "../layout.js" if this HTML file is in a subfolder, to "../../layout.js" if this HTML file is in 2 subfolders, etc. -->
+    <script src="./layout.js"></script>
+    
+    <script>
+      // Template generated with petrapixel's layout generator.
+      // (Please do not remove this credit.)
+      console.log("%cTemplate generated with petrapixel's layout generator: https://petrapixel.neocities.org/coding/layout-generator", "font-size: 14pt; color: #922a45; background: #ffd3ef");
+    </script>
+  </head>
+  <body>
+    <!-- The next line is a skip-to-content link for keyboard users. Do not remove it! -->
+    <a href="#content" id="skip-to-content-link">Skip to content</a>
+
+    <div class="layout">
+      
+      <!-- =============================================== -->
+      <!-- Header (and Sidebars) will be loaded per JavaScript! Edit layout.js to change. -->
+      <!-- =============================================== -->
+
+  
+      <main id="content"> <!-- Do NOT remove the ID here -->
+
+        <noscript>Please enable JavaScript to view this website!</noscript>
+
+        <!-- =============================================== -->
+        <!-- MAIN CONTENT -->
+        <!-- =============================================== -->
+
+        You are visitor # <span id="hitcount"></span>
+
+<script>
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      var site_data = JSON.parse(this.responseText);
+      var num_arr = site_data.info.views.toString().split("");
+      var num_str = "";
+      for (i = 0; i < num_arr.length; i++) {
+        num_str += num_arr[i];
+        if ( (num_arr.length-1 - i) % 3 == 0 && (num_arr.length-1 - i) != 0 ) {num_str += ",";}
+      }
+      document.getElementById("hitcount").innerHTML = num_str;
+    }
+  };
+  xhttp.open("GET", "https://weirdscifi.ratiosemper.com/neocities.php?sitename=owen-spleen", true);
+  xhttp.send();
+</script>
+        <section>
+        <a href="https://riitag.t0g3pii.de/user/798656723597787147"><img src="https://riitag.t0g3pii.de/798656723597787147/tag.png" alt="RiiTag" /></a>
+        <div id="templateWebring">
+  <link rel="stylesheet" href="https://fan.nekoweb.org/webring.css">
+  <div id="webringiconbox">
+    <link rel="stylesheet" href="https://fan.nekoweb.org/webring.css">
+    <img id="iconWebring" src="https://fan.nekoweb.org/images/oscwricons/owenbot.png">
+  </div>
+  <div id="webringdescbox">
+    <link rel="stylesheet" href="https://fan.nekoweb.org/webring.css">
+    <p id="webringdesc">
+      <strong>Owen</strong> is a certified<br>
+      <strong>Bot</strong> fan in the <strong>OSC Webring</strong>!
+    </p>
+  </div>
+  <div id="webringlinks">
+    <link rel="stylesheet" href="https://fan.nekoweb.org/webring.css">
+    <p id="linkparaWebring"> | <a href="https://fan.nekoweb.org/oscwrmem.html">Members List</a> | <br> Part of the <a href="https://fan.nekoweb.org/oscwr.html">OSC Webring</a>
+    </p>
+  </div>
+</div>
+      <div class="header__inner">
+    <p>&#127911; <span id="song">&#8987;</span></p>
+</div>
+<div class="header__inner">
+    <p><small>latest played song on <a href="http://last.fm" target="_blank">last.fm</a></small> | <small>powered by <a
+                href="https://github.com/biancarosa/lastfm-last-played"
+                target="_blank">@biancarosa/lastfm-last-played</a></small></p>
+</div>
+<script type="text/javascript">
+    let user = 'keaneob3';
+    let url = 'https://lastfm-last-played.biancarosa.com.br/' + user + '/latest-song';
+    let song = document.querySelector('#song');
+    fetch(url)
+        .then(function (response) {
+            return response.json()
+        }).then(function (json) {
+            song.innerHTML = json['track']['name'] + ' - ' + json['track']['artist']['#text'];
+        });
+</script>
+        </section>
+      </main>
+      
+      <!-- =============================================== -->
+      <!-- Footer will be loaded per JavaScript! Edit layout.js to change. -->
+      <!-- =============================================== -->
+
+  
+    <!-- Closing .layout: -->
+    </div>
+    <!-- Add any additional Javascript code (<script></script>) here. -->
+  </body>
+</html>
